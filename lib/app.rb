@@ -9,7 +9,7 @@ SiteConfig = OpenStruct.new(
 module Example
   class Web < Sinatra::Base
     configure do
-      set :public, "#{File.dirname(__FILE__)}/../public"
+      set :public_folder, "#{File.dirname(__FILE__)}/../public"
       set :views, "#{File.dirname(__FILE__)}/../views"
       set :haml, { :attr_wrapper => '"' }
     end

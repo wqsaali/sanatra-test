@@ -13,4 +13,5 @@ $stdout.reopen(log)
 $stderr.reopen(log)
 
 use Rack::ShowExceptions
+use Rack::ContentLength
 use Rack::Static, :urls => [ '/favicon.ico', '/stylesheets' ], :root => "public"
