@@ -6,6 +6,7 @@ Bundler.setup
 Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 
 Dir["./lib/**/*.rb"].each { |f| require f }
+Dir["./app/controllers/**/*.rb"].each { |f| require f }
 
 FileUtils.mkdir_p 'log' unless File.exists?('log')
 log = File.new("log/sinatra.log", "a")
